@@ -1,0 +1,80 @@
+"use client"
+
+import React from 'react';
+import Link from 'next/link';
+import { useLanguage } from '@/components/context/LanguageContext';
+import { Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+
+export const Footer = () => {
+  const { t } = useLanguage();
+
+  return (
+    <footer className="bg-background border-t pt-16 pb-8 px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          <div className="space-y-6">
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">C</div>
+              <span className="text-2xl font-bold tracking-tight">CVEEEZ</span>
+            </div>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              {t('hero.subtitle')}
+            </p>
+            <div className="flex gap-4">
+              <Link href="https://www.facebook.com/cveeez.eg/" target="_blank" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                <Facebook className="w-5 h-5" />
+              </Link>
+              <Link href="https://eg.linkedin.com/company/cveeez" target="_blank" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+                <Linkedin className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-6">{t('nav.services')}</h4>
+            <ul className="space-y-4 text-sm text-muted-foreground">
+              <li><Link href="https://www.cveeez.net/services/ai-cv-builder" className="hover:text-primary">{t('services.ai_cv.name')}</Link></li>
+              <li><Link href="https://www.cveeez.net/jobs" className="hover:text-primary">{t('services.jobs.name')}</Link></li>
+              <li><Link href="#" className="hover:text-primary">{t('services.talent.name')}</Link></li>
+              <li><Link href="#" className="hover:text-primary">{t('services.advisor.name')}</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-6">{t('nav.policies')}</h4>
+            <ul className="space-y-4 text-sm text-muted-foreground">
+              <li><Link href="/policies" className="hover:text-primary">{t('policies.terms')}</Link></li>
+              <li><Link href="/policies" className="hover:text-primary">{t('policies.privacy')}</Link></li>
+              <li><Link href="/policies" className="hover:text-primary">{t('policies.refund')}</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-6">{t('contact.title')}</h4>
+            <ul className="space-y-4 text-sm text-muted-foreground">
+              <li className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-primary" />
+                <span>{t('contact.address')}</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary" />
+                <a href="tel:+201065236963" className="hover:text-primary">+20 106 523 6963</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary" />
+                <a href="mailto:cveeez@cveeez.online" className="hover:text-primary">cveeez@cveeez.online</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
+          <p>{t('footer.rights')}</p>
+          <div className="flex gap-6">
+            <Link href="https://www.cveeez.com" className="hover:text-primary">www.cveeez.com</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
