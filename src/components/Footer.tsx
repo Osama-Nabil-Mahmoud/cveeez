@@ -1,22 +1,14 @@
 "use client"
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/components/context/LanguageContext';
-import { useTheme } from '@/components/context/ThemeContext';
-import { Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
 export const Footer = () => {
   const { t } = useLanguage();
-  const { theme } = useTheme();
   
-  const ICON_URL = "/logo-icon.png";
-
-  useEffect(() => {
-    console.log("Resolved Footer Icon URL:", ICON_URL);
-  }, [ICON_URL]);
-
   const LogoText = ({ sizeClass = "text-[18px]" }: { sizeClass?: string }) => (
     <div 
       dir="ltr"
@@ -37,22 +29,10 @@ export const Footer = () => {
             <Link 
               href="/" 
               dir="ltr"
-              className="flex flex-row items-center gap-2 group w-fit" 
+              className="flex flex-row items-center group w-fit" 
               aria-label="CVEEEZ Home"
               style={{ unicodeBidi: 'isolate' }}
             >
-              <div className={cn(
-                "transition-all shrink-0 flex items-center justify-center",
-                theme === 'light' ? "bg-slate-900/5 p-1 rounded-md border border-slate-900/10" : ""
-              )}>
-                <img 
-                  src={ICON_URL} 
-                  alt="CVEEEZ icon" 
-                  loading="lazy"
-                  className="h-6 w-auto object-contain"
-                  onError={() => console.error("Footer Icon failed to load")}
-                />
-              </div>
               <LogoText />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">

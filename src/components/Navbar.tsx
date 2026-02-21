@@ -14,18 +14,11 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Next.js standard public path is "/", but we use a constant for consistency
-  const ICON_URL = "/logo-icon.png";
-
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
-    
-    // Runtime check for icon visibility
-    console.log("Resolved Navbar Icon URL:", ICON_URL);
-    
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [ICON_URL]);
+  }, []);
 
   const navLinks = [
     { name: t('nav.home'), href: '/', aria: "Go to homepage" },
@@ -56,24 +49,10 @@ export const Navbar = () => {
         <Link 
           href="/" 
           dir="ltr"
-          className="flex flex-row items-center gap-2 group" 
+          className="flex flex-row items-center group" 
           aria-label="CVEEEZ Home"
           style={{ unicodeBidi: 'isolate' }}
         >
-          <div className={cn(
-            "transition-all duration-300 shrink-0 flex items-center justify-center",
-            theme === 'light' ? "bg-slate-900/5 p-1 rounded-lg border border-slate-900/10" : ""
-          )}>
-            <img 
-              src={ICON_URL} 
-              alt="CVEEEZ icon" 
-              loading="lazy"
-              className="h-7 w-auto md:h-8 object-contain"
-              onError={(e) => {
-                console.error("Icon failed to load at:", ICON_URL);
-              }}
-            />
-          </div>
           <LogoText />
         </Link>
 
