@@ -23,6 +23,8 @@ export const Navbar = () => {
   const navLinks = [
     { name: t('nav.home'), href: '/', aria: "Go to homepage" },
     { name: t('nav.services'), href: '/#services', aria: "View our services" },
+    { name: t('nav.about'), href: '/#about', aria: "Learn about CVeeeZ" },
+    { name: t('nav.team'), href: '/#team', aria: "Meet our team" },
     { name: t('nav.apps'), href: '/#apps', aria: "Download our mobile apps" },
     { name: t('nav.policies'), href: '/policies', aria: "Read our policies" },
     { name: t('nav.contact'), href: '/contact', aria: "Contact us" },

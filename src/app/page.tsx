@@ -1,4 +1,3 @@
-
 "use client"
 
 import { Navbar } from '@/components/Navbar';
@@ -7,6 +6,7 @@ import { useLanguage } from '@/components/context/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { 
   Rocket, 
   Briefcase, 
@@ -18,9 +18,13 @@ import {
   ArrowRight,
   ShieldCheck,
   Zap,
-  CheckCircle2
+  CheckCircle2,
+  Trophy,
+  Target,
+  TrendingUp
 } from 'lucide-react';
 import Link from 'next/link';
+import { teamMembers } from '@/data/team-data';
 
 export default function Home() {
   const { t, isRtl } = useLanguage();
@@ -33,6 +37,12 @@ export default function Home() {
     { icon: Layout, title: t('services.templates.name'), desc: t('services.templates.desc') },
     { icon: Globe, title: t('services.translator.name'), desc: t('services.translator.desc') },
     { icon: ShoppingBag, title: t('services.store.name'), desc: t('services.store.desc') },
+  ];
+
+  const aboutFeatures = [
+    { icon: Trophy, title: t('about.feature1_title'), desc: t('about.feature1_desc') },
+    { icon: Target, title: t('about.feature2_title'), desc: t('about.feature2_desc') },
+    { icon: TrendingUp, title: t('about.feature3_title'), desc: t('about.feature3_desc') },
   ];
 
   return (
@@ -124,6 +134,81 @@ export default function Home() {
                   </div>
                   <h3 className="text-xl font-bold">{svc.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{svc.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 px-6 lg:px-12 bg-muted/20">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <div className="order-2 lg:order-1 relative">
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl" />
+            <img 
+              src="https://picsum.photos/seed/about/600/500" 
+              alt="About CVeeeZ" 
+              className="rounded-3xl shadow-2xl border border-border relative z-10"
+              data-ai-hint="office meeting professional"
+            />
+          </div>
+          <div className="order-1 lg:order-2 space-y-8">
+            <div className="space-y-4">
+              <Badge variant="outline" className="text-primary border-primary/20">{t('about.subtitle')}</Badge>
+              <h2 className="text-4xl font-bold">{t('about.title')}</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                {t('about.description')}
+              </p>
+            </div>
+            
+            <div className="grid gap-6">
+              {aboutFeatures.map((feat, i) => (
+                <div key={i} className="flex gap-4 p-4 rounded-2xl bg-background border border-border/50 hover:border-primary/20 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                    <feat.icon className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold">{feat.title}</h4>
+                    <p className="text-sm text-muted-foreground">{feat.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <Button asChild size="lg" className="rounded-full px-8">
+              <Link href="/#services">
+                {t('about.cta')}
+                <ArrowRight className={cn("w-4 h-4", isRtl ? "mr-2 rotate-180" : "ml-2")} />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section id="team" className="py-24 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <Badge variant="outline" className="text-secondary border-secondary/20">{t('team.subtitle')}</Badge>
+            <h2 className="text-4xl font-bold">{t('team.title')}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t('team.description')}</p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member) => (
+              <Card key={member.id} className="group border-none shadow-none bg-transparent text-center space-y-4">
+                <CardContent className="p-0 space-y-4">
+                  <div className="relative mx-auto w-48 h-48">
+                    <div className="absolute inset-0 bg-primary/5 rounded-full group-hover:scale-110 transition-transform duration-500" />
+                    <Avatar className="w-48 h-48 border-4 border-background shadow-xl">
+                      <AvatarImage src={member.image} />
+                      <AvatarFallback className="bg-primary/10 text-primary text-4xl font-bold">{member.initials}</AvatarFallback>
+                    </Avatar>
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="text-xl font-bold">{member.name}</h3>
+                    <p className="text-primary font-medium text-sm">{member.role}</p>
+                  </div>
                 </CardContent>
               </Card>
             ))}

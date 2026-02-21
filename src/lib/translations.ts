@@ -3,6 +3,8 @@ export const translations: any = {
     nav: {
       home: "الرئيسية",
       services: "خدماتنا",
+      about: "نبذة عنا",
+      team: "فريقنا",
       apps: "التطبيقات",
       contact: "تواصل معنا",
       policies: "السياسات",
@@ -50,6 +52,23 @@ export const translations: any = {
         name: "متجر الخدمات المهنية",
         desc: "خدمات كتابة السيرة الذاتية والتطوير المهني بأيدي خبراء."
       }
+    },
+    about: {
+      title: "نبذة عنا",
+      subtitle: "About CVeeeZ",
+      description: "سي في يييز (CVeeeZ) هي المنصة العربية الأولى والوحيدة التي تدمج بين الذكاء الاصطناعي وبوابات التوظيف المتطورة. نسعى لتمكين الشباب العربي من خلال تقديم أدوات احترافية لبناء سيرة ذاتية ذكية متوافقة مع أنظمة الـ ATS العالمية، وربطهم بأفضل الفرص الوظيفية المتاحة.",
+      feature1_title: "منصة متكاملة",
+      feature1_desc: "نجمع بين بناء السيرة الذاتية وبوابة الوظائف في مكان واحد.",
+      feature2_title: "دقة عالية",
+      feature2_desc: "تحويل البيانات بدقة احترافية لضمان وصولك للمقابلات الوظيفية.",
+      feature3_title: "نمو مستمر",
+      feature3_desc: "نحدث أدواتنا يومياً لمواكبة متطلبات سوق العمل العالمي.",
+      cta: "اكتشف المزيد"
+    },
+    team: {
+      title: "فريقنا",
+      subtitle: "Our Team",
+      description: "نحن مجموعة من المبدعين والخبراء التقنيين المكرسين لتغيير مستقبل التوظيف في الوطن العربي."
     },
     features: {
       ats: "ATS Friendly",
@@ -99,6 +118,8 @@ export const translations: any = {
     nav: {
       home: "Home",
       services: "Services",
+      about: "About Us",
+      team: "Team",
       apps: "Apps",
       contact: "Contact",
       policies: "Policies",
@@ -146,6 +167,23 @@ export const translations: any = {
         name: "Pro Services Store",
         desc: "Expert CV writing and professional development services."
       }
+    },
+    about: {
+      title: "About Us",
+      subtitle: "About CVeeeZ",
+      description: "CVeeeZ is the first Arabic platform that integrates AI with advanced job portals. We aim to empower Arabic-speaking talent by providing smart, ATS-compliant CV building tools and connecting them with the best career opportunities.",
+      feature1_title: "Integrated Platform",
+      feature1_desc: "Combining CV building and job portal in one single place.",
+      feature2_title: "High Accuracy",
+      feature2_desc: "Professional data conversion to ensure you land your interviews.",
+      feature3_title: "Continuous Growth",
+      feature3_desc: "Updating our tools daily to match global market demands.",
+      cta: "Learn More"
+    },
+    team: {
+      title: "Our Team",
+      subtitle: "Our Team",
+      description: "We are a group of creators and technical experts dedicated to changing the future of employment in the Arab world."
     },
     features: {
       ats: "ATS Friendly",
