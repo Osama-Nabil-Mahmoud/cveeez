@@ -50,7 +50,7 @@ export const Footer = () => {
                 <Facebook className="w-5 h-5" />
               </Link>
               <Link 
-                href="https://eg.linkedin.com/company/cveeez" 
+                href="https://www.linkedin.com/company/cveez/posts/?feedView=all" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" 
@@ -66,8 +66,8 @@ export const Footer = () => {
             <ul className="space-y-4 text-sm text-muted-foreground">
               <li><Link href="https://www.cveeez.net/services/ai-cv-builder" target="_blank" rel="noopener noreferrer" className="hover:text-primary">{t('services.ai_cv.name')}</Link></li>
               <li><Link href="https://www.cveeez.net/jobs" target="_blank" rel="noopener noreferrer" className="hover:text-primary">{t('services.jobs.name')}</Link></li>
-              <li><Link href="#" className="hover:text-primary">{t('services.talent.name')}</Link></li>
-              <li><Link href="#" className="hover:text-primary">{t('services.advisor.name')}</Link></li>
+              <li><Link href="https://www.cveeez.net/#talent" target="_blank" rel="noopener noreferrer" className="hover:text-primary">{t('services.talent.name')}</Link></li>
+              <li><Link href="https://www.cveeez.net/services/ai-cv-builder" target="_blank" rel="noopener noreferrer" className="hover:text-primary">{t('services.advisor.name')}</Link></li>
             </ul>
           </div>
 
