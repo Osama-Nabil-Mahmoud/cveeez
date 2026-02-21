@@ -27,7 +27,6 @@ export default function Home() {
   const { t, isRtl } = useLanguage();
 
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-illustration');
-  const appImg = PlaceHolderImages.find(img => img.id === 'mobile-app-mockup');
 
   const services = [
     { icon: Rocket, title: t('services.ai_cv.name'), desc: t('services.ai_cv.desc') },
@@ -133,38 +132,6 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mobile Apps CTA */}
-      <section id="apps" className="py-24 px-6 lg:px-12 bg-secondary/5">
-        <div className="max-w-7xl mx-auto rounded-3xl bg-secondary p-8 lg:p-16 text-white grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl lg:text-5xl font-bold">{t('apps.title')}</h2>
-            <p className="text-secondary-foreground text-lg">{t('apps.desc')}</p>
-            <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-white/20 hover:bg-white/10 text-white h-14 px-8">
-                <Link href="https://play.google.com/store/apps/details?id=com.soforx.cveeez" target="_blank" rel="noopener noreferrer">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-full" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent border-white/20 hover:bg-white/10 text-white h-14 px-8">
-                <Link href="https://apps.apple.com/eg/app/cveeez/id6459511141" target="_blank" rel="noopener noreferrer">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="h-full" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-          <div className="relative flex justify-center">
-            {appImg && (
-              <img 
-                src={appImg.imageUrl} 
-                alt={appImg.description} 
-                className="max-h-[500px] object-contain drop-shadow-2xl"
-                data-ai-hint={appImg.imageHint}
-              />
-            )}
           </div>
         </div>
       </section>

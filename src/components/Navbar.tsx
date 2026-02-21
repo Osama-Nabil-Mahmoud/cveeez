@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react';
@@ -35,7 +36,6 @@ export const Navbar = () => {
       aria: "Meet our team on the official website", 
       isExternal: true 
     },
-    { name: t('nav.apps'), href: '/#apps', aria: "Download our mobile apps" },
     { name: t('nav.policies'), href: '/policies', aria: "Read our policies" },
     { name: t('nav.contact'), href: '/contact', aria: "Contact us" },
   ];
