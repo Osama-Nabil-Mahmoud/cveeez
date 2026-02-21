@@ -3,15 +3,15 @@
   "placeholderImages": [
     {
       "id": "hero-illustration",
-      "description": "3D minimal SaaS landing page hero illustration with floating badges and document UI",
-      "imageUrl": "https://picsum.photos/seed/cveeez-hero/1200/800",
-      "imageHint": "saas illustration"
+      "description": "3D minimal SaaS landing page hero illustration, wide 16:9. Right side: large rounded white document with floating badges (ATS Friendly, AI Analysis, PDF Export). Soft dark navy-to-teal gradient background. No people, no faces, no clutter, clean minimal design.",
+      "imageUrl": "https://picsum.photos/seed/cveeez-hero-v2/1200/675",
+      "imageHint": "minimal saas"
     },
     {
       "id": "mobile-app-mockup",
-      "description": "Mobile app mockup showing CVEEEZ application on a phone screen",
-      "imageUrl": "https://picsum.photos/seed/phone/400/800",
-      "imageHint": "mobile app"
+      "description": "Clean mobile app mockup on a simple neutral background. Focus on professional UI and clear document layout. No people, minimalist composition.",
+      "imageUrl": "https://picsum.photos/seed/cveeez-app/400/800",
+      "imageHint": "mobile ui"
     }
   ]
 }
