@@ -3,7 +3,7 @@
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { useLanguage } from '@/components/context/LanguageContext';
-import { Mail, Phone, MapPin, MessageSquare } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -56,6 +56,16 @@ export default function ContactPage() {
             </div>
 
             <div className="p-8 rounded-2xl border border-border bg-card/50 hover:border-primary/50 transition-colors space-y-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                <Globe className="w-6 h-6" />
+              </div>
+              <div>
+                <h4 className="font-bold text-xl mb-1">{t('contact.website')}</h4>
+                <p className="text-muted-foreground">www.cveeez.com</p>
+              </div>
+            </div>
+
+            <div className="p-8 rounded-2xl border border-border bg-card/50 hover:border-primary/50 transition-colors space-y-4 sm:col-span-2">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                 <MessageSquare className="w-6 h-6" />
               </div>

@@ -99,7 +99,8 @@ export const translations: any = {
       form_submit: "إرسال الرسالة",
       info_title: "معلومات الاتصال",
       address: "القاهرة، مصر",
-      support: "الدعم الفني والرد خلال 3-5 أيام عمل"
+      support: "الدعم الفني والرد خلال 3-5 أيام عمل",
+      website: "الموقع الإلكتروني"
     },
     policies: {
       title: "السياسات والامتثال",
@@ -216,7 +217,8 @@ export const translations: any = {
       form_submit: "Send Message",
       info_title: "Contact Information",
       address: "Cairo, Egypt",
-      support: "Support response within 3-5 business days"
+      support: "Support response within 3-5 business days",
+      website: "Website"
     },
     policies: {
       title: "Compliance & Policies",
