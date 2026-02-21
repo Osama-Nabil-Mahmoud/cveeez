@@ -1,11 +1,10 @@
-
 {
   "placeholderImages": [
     {
       "id": "hero-illustration",
-      "description": "A man in a light blue professional shirt in a thinking pose with his hand on his chin. Floating around him are two 3D architectural models of modern multi-story buildings. The background is a deep blue digital abstract space with network nodes and glowing connections. The overall aesthetic is professional, tech-oriented, and focused on career/real estate development. High resolution composite image with studio lighting.",
-      "imageUrl": "https://picsum.photos/seed/cveeez-hero-man-buildings/1920/1080",
-      "imageHint": "thinking professional"
+      "description": "Professional 3D hero illustration for CVEEEZ platform showing a man in a professional shirt with architectural building models and digital network background.",
+      "imageUrl": "https://tahalib.inzox.co/upload/work/Image532741692459215.jpg",
+      "imageHint": "professional career success"
     }
   ]
 }
