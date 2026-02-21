@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Navbar } from '@/components/Navbar';
@@ -53,7 +54,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold">Phone</h4>
-                  <a href="tel:+201065236963" className="text-muted-foreground text-sm hover:text-primary transition-colors">
+                  <a href="tel:+201065236963" target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary transition-colors">
                     +20 106 523 6963
                   </a>
                 </div>
@@ -65,10 +66,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="font-bold">Email</h4>
-                  <a href="mailto:cveeez@cveeez.online" className="text-muted-foreground text-sm block hover:text-primary">
+                  <a href="mailto:cveeez@cveeez.online" target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm block hover:text-primary">
                     cveeez@cveeez.online
                   </a>
-                  <a href="mailto:support@cveeez.online" className="text-muted-foreground text-sm hover:text-primary">
+                  <a href="mailto:support@cveeez.online" target="_blank" rel="noopener noreferrer" className="text-muted-foreground text-sm hover:text-primary">
                     support@cveeez.online
                   </a>
                 </div>

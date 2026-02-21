@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useState, useEffect } from 'react';
@@ -83,7 +84,7 @@ export const Navbar = () => {
             <Languages className="w-5 h-5" />
           </Button>
           <Button asChild className="hidden sm:inline-flex bg-primary hover:bg-primary/90" aria-label="Start building your CV">
-            <Link href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder">
+            <Link href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder" target="_blank" rel="noopener noreferrer">
               {t('nav.buildCv')}
             </Link>
           </Button>
@@ -115,7 +116,7 @@ export const Navbar = () => {
               </Link>
             ))}
             <Button asChild className="w-full bg-primary mt-2">
-              <Link href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder">
+              <Link href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder" target="_blank" rel="noopener noreferrer">
                 {t('nav.buildCv')}
               </Link>
             </Button>

@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Navbar } from '@/components/Navbar';
@@ -54,13 +55,13 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-white px-8 h-12 rounded-full">
-                <Link href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder">
+                <Link href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder" target="_blank" rel="noopener noreferrer">
                   {t('hero.cta_primary')}
                   <ArrowRight className={cn("w-4 h-4", isRtl ? "mr-2 rotate-180" : "ml-2")} />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild className="px-8 h-12 rounded-full border-primary/20 hover:bg-primary/5">
-                <Link href="https://www.cveeez.net/jobs">
+                <Link href="https://www.cveeez.net/jobs" target="_blank" rel="noopener noreferrer">
                   {t('hero.cta_secondary')}
                 </Link>
               </Button>
@@ -138,12 +139,12 @@ export default function Home() {
             <p className="text-secondary-foreground text-lg">{t('apps.desc')}</p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" variant="outline" className="bg-transparent border-white/20 hover:bg-white/10 text-white h-14 px-8">
-                <Link href="https://play.google.com/store/apps/details?id=com.soforx.cveeez" target="_blank">
+                <Link href="https://play.google.com/store/apps/details?id=com.soforx.cveeez" target="_blank" rel="noopener noreferrer">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" className="h-full" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-transparent border-white/20 hover:bg-white/10 text-white h-14 px-8">
-                <Link href="https://apps.apple.com/eg/app/cveeez/id6459511141" target="_blank">
+                <Link href="https://apps.apple.com/eg/app/cveeez/id6459511141" target="_blank" rel="noopener noreferrer">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" className="h-full" />
                 </Link>
               </Button>

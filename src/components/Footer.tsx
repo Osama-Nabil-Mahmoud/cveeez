@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react';
@@ -33,10 +34,10 @@ export const Footer = () => {
               {t('hero.subtitle')}
             </p>
             <div className="flex gap-4">
-              <Link href="https://www.facebook.com/cveeez.eg/" target="_blank" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Facebook">
+              <Link href="https://www.facebook.com/cveeez.eg/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </Link>
-              <Link href="https://eg.linkedin.com/company/cveeez" target="_blank" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="LinkedIn">
+              <Link href="https://eg.linkedin.com/company/cveeez" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </Link>
             </div>
@@ -45,8 +46,8 @@ export const Footer = () => {
           <div>
             <h4 className="font-bold mb-6">{t('nav.services')}</h4>
             <ul className="space-y-4 text-sm text-muted-foreground">
-              <li><Link href="https://www.cveeez.net/services/ai-cv-builder" className="hover:text-primary">{t('services.ai_cv.name')}</Link></li>
-              <li><Link href="https://www.cveeez.net/jobs" className="hover:text-primary">{t('services.jobs.name')}</Link></li>
+              <li><Link href="https://www.cveeez.net/services/ai-cv-builder" target="_blank" rel="noopener noreferrer" className="hover:text-primary">{t('services.ai_cv.name')}</Link></li>
+              <li><Link href="https://www.cveeez.net/jobs" target="_blank" rel="noopener noreferrer" className="hover:text-primary">{t('services.jobs.name')}</Link></li>
               <li><Link href="#" className="hover:text-primary">{t('services.talent.name')}</Link></li>
               <li><Link href="#" className="hover:text-primary">{t('services.advisor.name')}</Link></li>
             </ul>
@@ -70,11 +71,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+201065236963" className="hover:text-primary">+20 106 523 6963</a>
+                <a href="tel:+201065236963" target="_blank" rel="noopener noreferrer" className="hover:text-primary">+20 106 523 6963</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:cveeez@cveeez.online" className="hover:text-primary">cveeez@cveeez.online</a>
+                <a href="mailto:cveeez@cveeez.online" target="_blank" rel="noopener noreferrer" className="hover:text-primary">cveeez@cveeez.online</a>
               </li>
             </ul>
           </div>
@@ -83,7 +84,7 @@ export const Footer = () => {
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>{t('footer.rights')}</p>
           <div className="flex gap-6">
-            <Link href="https://www.cveeez.com" className="hover:text-primary">www.cveeez.com</Link>
+            <Link href="https://www.cveeez.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">www.cveeez.com</Link>
           </div>
         </div>
       </div>
