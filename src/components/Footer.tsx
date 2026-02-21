@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useEffect } from 'react';
@@ -11,11 +10,12 @@ import { cn } from '@/lib/utils';
 export const Footer = () => {
   const { t } = useLanguage();
   const { theme } = useTheme();
+  
+  const ICON_URL = "/logo-icon.png";
 
   useEffect(() => {
-    // Confirm logo path loading
-    console.log("Resolved Footer Logo Path:", "/logo-icon.png");
-  }, []);
+    console.log("Resolved Footer Icon URL:", ICON_URL);
+  }, [ICON_URL]);
 
   const LogoText = ({ sizeClass = "text-[18px]" }: { sizeClass?: string }) => (
     <div 
@@ -37,19 +37,20 @@ export const Footer = () => {
             <Link 
               href="/" 
               dir="ltr"
-              className="flex flex-row items-center gap-2 group" 
+              className="flex flex-row items-center gap-2 group w-fit" 
               aria-label="CVEEEZ Home"
               style={{ unicodeBidi: 'isolate' }}
             >
               <div className={cn(
-                "transition-all shrink-0",
+                "transition-all shrink-0 flex items-center justify-center",
                 theme === 'light' ? "bg-slate-900/5 p-1 rounded-md border border-slate-900/10" : ""
               )}>
                 <img 
-                  src="/logo-icon.png" 
+                  src={ICON_URL} 
                   alt="CVEEEZ icon" 
                   loading="lazy"
                   className="h-6 w-auto object-contain"
+                  onError={() => console.error("Footer Icon failed to load")}
                 />
               </div>
               <LogoText />
@@ -58,10 +59,22 @@ export const Footer = () => {
               {t('hero.subtitle')}
             </p>
             <div className="flex gap-4">
-              <Link href="https://www.facebook.com/cveeez.eg/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Facebook">
+              <Link 
+                href="https://www.facebook.com/cveeez.eg/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" 
+                aria-label="Facebook"
+              >
                 <Facebook className="w-5 h-5" />
               </Link>
-              <Link href="https://eg.linkedin.com/company/cveeez" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="LinkedIn">
+              <Link 
+                href="https://eg.linkedin.com/company/cveeez" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" 
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="w-5 h-5" />
               </Link>
             </div>
@@ -108,7 +121,14 @@ export const Footer = () => {
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>{t('footer.rights')}</p>
           <div className="flex gap-6">
-            <Link href="https://www.cveeez.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">www.cveeez.com</Link>
+            <Link 
+              href="https://www.cveeez.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-primary"
+            >
+              www.cveeez.com
+            </Link>
           </div>
         </div>
       </div>

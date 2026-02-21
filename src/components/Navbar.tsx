@@ -1,4 +1,3 @@
-
 "use client"
 
 import React, { useState, useEffect } from 'react';
@@ -10,20 +9,23 @@ import { Moon, Sun, Languages, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export const Navbar = () => {
-  const { t, toggleLanguage, language } = useLanguage();
+  const { t, toggleLanguage } = useLanguage();
   const { toggleTheme, theme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Next.js standard public path is "/", but we use a constant for consistency
+  const ICON_URL = "/logo-icon.png";
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     
-    // Confirm logo path loading
-    console.log("Resolved Navbar Logo Path:", "/logo-icon.png");
+    // Runtime check for icon visibility
+    console.log("Resolved Navbar Icon URL:", ICON_URL);
     
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [ICON_URL]);
 
   const navLinks = [
     { name: t('nav.home'), href: '/', aria: "Go to homepage" },
@@ -59,14 +61,17 @@ export const Navbar = () => {
           style={{ unicodeBidi: 'isolate' }}
         >
           <div className={cn(
-            "transition-all duration-300 shrink-0",
+            "transition-all duration-300 shrink-0 flex items-center justify-center",
             theme === 'light' ? "bg-slate-900/5 p-1 rounded-lg border border-slate-900/10" : ""
           )}>
             <img 
-              src="/logo-icon.png" 
+              src={ICON_URL} 
               alt="CVEEEZ icon" 
               loading="lazy"
               className="h-7 w-auto md:h-8 object-contain"
+              onError={(e) => {
+                console.error("Icon failed to load at:", ICON_URL);
+              }}
             />
           </div>
           <LogoText />
@@ -107,7 +112,11 @@ export const Navbar = () => {
             <Languages className="w-5 h-5" />
           </Button>
           <Button asChild className="hidden sm:inline-flex bg-primary hover:bg-primary/90" aria-label="Start building your CV">
-            <Link href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder" target="_blank" rel="noopener noreferrer">
+            <Link 
+              href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
               {t('nav.buildCv')}
             </Link>
           </Button>
@@ -139,7 +148,11 @@ export const Navbar = () => {
               </Link>
             ))}
             <Button asChild className="w-full bg-primary mt-2">
-              <Link href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder" target="_blank" rel="noopener noreferrer">
+              <Link 
+                href="https://www.cveeez.net/login?redirect=%2Fservices%2Fai-cv-builder" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 {t('nav.buildCv')}
               </Link>
             </Button>

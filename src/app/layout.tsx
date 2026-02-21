@@ -7,10 +7,15 @@ import {Toaster} from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'CVEEEZ - Your Career Partner | شريكك المهني',
   description: 'CVEEEZ is your trusted platform for career development, AI CV building, and job searching.',
+  icons: {
+    icon: '/logo-icon.png',
+    apple: '/logo-icon.png',
+  },
   openGraph: {
     title: 'CVEEEZ - Your Career Partner',
     description: 'AI CV Builder, Job Board, and Professional Services.',
-    images: ['/logo.png'],
+    images: ['/logo-icon.png'],
+    type: 'website',
   },
 };
 
