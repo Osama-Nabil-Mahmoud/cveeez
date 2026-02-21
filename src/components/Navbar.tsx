@@ -29,24 +29,32 @@ export const Navbar = () => {
     { name: t('nav.contact'), href: '/contact', aria: "Contact us" },
   ];
 
+  const LogoText = ({ sizeClass = "text-[20px]" }: { sizeClass?: string }) => (
+    <div className={cn("font-bold tracking-[-0.02em] leading-none flex items-center", sizeClass)}>
+      <span className="text-[#C65C2B]">CV</span>
+      <span className="text-[#17181F] dark:text-[#F5F5F5]">eee</span>
+      <span className="text-[#136A66]">z</span>
+    </div>
+  );
+
   return (
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 lg:px-12",
       isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group" aria-label="CVEEEZ Home">
+        <Link href="/" className="flex items-center gap-2 group" aria-label="CVEEEZ Home">
           <div className={cn(
-            "transition-all duration-300",
+            "transition-all duration-300 shrink-0",
             theme === 'light' ? "bg-slate-900/5 p-1 rounded-lg" : ""
           )}>
             <img 
               src="/logo.png" 
               alt="CVEEEZ logo" 
-              className="h-7 w-auto md:h-[34px] object-contain"
+              className="h-7 w-auto md:h-8 object-contain"
             />
           </div>
-          <span className="text-2xl font-bold tracking-tight text-foreground group-hover:text-primary transition-colors">CVEEEZ</span>
+          <LogoText />
         </Link>
 
         {/* Desktop Links */}

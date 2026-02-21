@@ -12,12 +12,20 @@ export const Footer = () => {
   const { t } = useLanguage();
   const { theme } = useTheme();
 
+  const LogoText = ({ sizeClass = "text-[18px]" }: { sizeClass?: string }) => (
+    <div className={cn("font-bold tracking-[-0.02em] leading-none flex items-center", sizeClass)}>
+      <span className="text-[#C65C2B]">CV</span>
+      <span className="text-[#17181F] dark:text-[#F5F5F5]">eee</span>
+      <span className="text-[#136A66]">z</span>
+    </div>
+  );
+
   return (
     <footer className="bg-background border-t pt-16 pb-8 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-3 group" aria-label="CVEEEZ Home">
+            <Link href="/" className="flex items-center gap-2 group" aria-label="CVEEEZ Home">
               <div className={cn(
                 "transition-all",
                 theme === 'light' ? "bg-slate-900/5 p-1 rounded-md" : ""
@@ -28,7 +36,7 @@ export const Footer = () => {
                   className="h-[26px] w-auto object-contain"
                 />
               </div>
-              <span className="text-2xl font-bold tracking-tight group-hover:text-primary transition-colors">CVEEEZ</span>
+              <LogoText />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t('hero.subtitle')}
