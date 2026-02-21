@@ -23,8 +23,18 @@ export const Navbar = () => {
   const navLinks = [
     { name: t('nav.home'), href: '/', aria: "Go to homepage" },
     { name: t('nav.services'), href: '/#services', aria: "View our services" },
-    { name: t('nav.about'), href: '/#about', aria: "Learn about CVeeeZ" },
-    { name: t('nav.team'), href: '/#team', aria: "Meet our team" },
+    { 
+      name: t('nav.about'), 
+      href: 'https://www.cveeez.net/#about', 
+      aria: "Learn about CVeeeZ on the official website", 
+      isExternal: true 
+    },
+    { 
+      name: t('nav.team'), 
+      href: 'https://www.cveeez.net/#team', 
+      aria: "Meet our team on the official website", 
+      isExternal: true 
+    },
     { name: t('nav.apps'), href: '/#apps', aria: "Download our mobile apps" },
     { name: t('nav.policies'), href: '/policies', aria: "Read our policies" },
     { name: t('nav.contact'), href: '/contact', aria: "Contact us" },
@@ -66,6 +76,7 @@ export const Navbar = () => {
               href={link.href} 
               className="text-sm font-medium hover:text-primary transition-colors"
               aria-label={link.aria}
+              {...(link.isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             >
               {link.name}
             </Link>
@@ -124,6 +135,7 @@ export const Navbar = () => {
                 onClick={() => setMobileMenuOpen(false)} 
                 className="text-lg font-medium border-b pb-2"
                 aria-label={link.aria}
+                {...(link.isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 {link.name}
               </Link>
