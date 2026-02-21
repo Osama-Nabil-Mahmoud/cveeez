@@ -3,8 +3,8 @@
   "placeholderImages": [
     {
       "id": "hero-illustration",
-      "description": "3D minimal SaaS landing page hero illustration, wide 16:9. Right side: large rounded white document with floating badges (ATS Friendly, AI Analysis, PDF Export). Soft dark navy-to-teal gradient background. No people, no faces, no clutter, clean minimal design.",
-      "imageUrl": "https://picsum.photos/seed/cveeez-hero-v2/1200/675",
+      "description": "3D minimal SaaS landing page hero illustration, wide 16:9. Composition: keep the LEFT 40% clean empty negative space for headline and CTA (no objects, no text). On the RIGHT side, a large rounded white resume/document sheet with subtle placeholder UI (light gray lines and blocks), soft ambient occlusion, realistic soft shadows. Dark navy-to-teal gradient background (#0B1220 to #0E2A3A) with gentle vignette, premium tech aesthetic. Three floating rounded badges/cards around the document with ICONS ONLY (no readable text): top-right: green check icon, center: sparkles/AI icon, bottom-left: document/PDF icon. Use brand accents subtly: teal (#136A66) and orange (#C65C2B) for highlights/icons only. Clean, modern, minimal, high detail, soft glow, depth of field, studio lighting. No people, no faces, no hands, no clutter, no logos, no watermark, no extra text. Ultra high resolution.",
+      "imageUrl": "https://picsum.photos/seed/cveeez-hero-v3/1200/675",
       "imageHint": "minimal saas"
     },
     {
