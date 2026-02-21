@@ -102,9 +102,14 @@ export const Footer = () => {
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>{t('footer.rights')}</p>
           <div className="flex gap-6">
-            <span className="select-none">
-              cveeez@cveeez.online
-            </span>
+            <Link 
+              href="https://www.cveeez.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+            >
+              www.cveeez.com
+            </Link>
           </div>
         </div>
       </div>
