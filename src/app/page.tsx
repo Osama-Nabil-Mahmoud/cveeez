@@ -21,7 +21,9 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   const { t, isRtl } = useLanguage();
@@ -83,14 +85,18 @@ export default function Home() {
           </div>
           <div className="relative animate-in fade-in slide-in-from-right-4 duration-700">
             <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full -z-10" />
-            {heroImg && (
-              <img 
-                src={heroImg.imageUrl} 
-                alt={heroImg.description} 
-                className="rounded-2xl shadow-2xl border border-border"
-                data-ai-hint={heroImg.imageHint}
-              />
-            )}
+            <div className="relative aspect-video w-full">
+              {heroImg && (
+                <Image 
+                  src={heroImg.imageUrl} 
+                  alt="CVEEEZ Professional Illustration" 
+                  fill
+                  className="rounded-2xl shadow-2xl border border-border object-cover"
+                  priority
+                  unoptimized // Google Drive links sometimes need this if they don't support resizing
+                />
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -175,5 +181,3 @@ export default function Home() {
     </main>
   );
 }
-
-const cn = (...classes: string[]) => classes.filter(Boolean).join(' ');
