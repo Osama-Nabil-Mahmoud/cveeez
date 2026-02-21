@@ -37,9 +37,9 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="font-bold text-xl mb-1">Phone</h4>
-                <a href="tel:+201065236963" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                <p className="text-muted-foreground">
                   +20 106 523 6963
-                </a>
+                </p>
               </div>
             </div>
 
@@ -49,11 +49,9 @@ export default function ContactPage() {
               </div>
               <div>
                 <h4 className="font-bold text-xl mb-1">Email</h4>
-                <div className="space-y-1">
-                  <a href="mailto:cveeez@cveeez.online" target="_blank" rel="noopener noreferrer" className="text-muted-foreground block hover:text-primary transition-colors">
-                    cveeez@cveeez.online
-                  </a>
-                </div>
+                <p className="text-muted-foreground">
+                  cveeez@cveeez.online
+                </p>
               </div>
             </div>
 
