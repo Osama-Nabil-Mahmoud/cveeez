@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from 'react';
@@ -101,14 +102,14 @@ export const Footer = () => {
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>{t('footer.rights')}</p>
           <div className="flex gap-6">
-            <Link 
-              href="https://www.cveeez.com" 
+            <a 
+              href="mailto:cveeez@cveeez.online" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-primary"
             >
-              www.cveeez.com
-            </Link>
+              cveeez@cveeez.online
+            </a>
           </div>
         </div>
       </div>
