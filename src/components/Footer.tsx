@@ -89,11 +89,11 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <a href="tel:+201065236963" target="_blank" rel="noopener noreferrer" className="hover:text-primary">+20 106 523 6963</a>
+                <span dir="ltr">+20 106 523 6963</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:cveeez@cveeez.online" target="_blank" rel="noopener noreferrer" className="hover:text-primary">cveeez@cveeez.online</a>
+                <span>cveeez@cveeez.online</span>
               </li>
             </ul>
           </div>
@@ -102,14 +102,9 @@ export const Footer = () => {
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>{t('footer.rights')}</p>
           <div className="flex gap-6">
-            <a 
-              href="mailto:cveeez@cveeez.online" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="hover:text-primary"
-            >
+            <span className="select-none">
               cveeez@cveeez.online
-            </a>
+            </span>
           </div>
         </div>
       </div>
