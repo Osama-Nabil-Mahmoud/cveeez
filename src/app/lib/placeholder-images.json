@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "hero-illustration",
-      "description": "3D minimal SaaS landing page hero illustration for CVEEEZ, wide 16:9. Composition: keep the LEFT 40% clean empty negative space for headline and CTA (no objects, no text). On the RIGHT side: a large rounded white resume/document card with subtle UI placeholders, plus a small floating 3D job search bar with a briefcase icon. Three floating 3D rounded badges with ICONS ONLY (no text): top-right green check (ATS), center sparkles/AI icon, and bottom-left document/PDF icon. Dark navy-to-teal gradient background (#0B1220 to #0E2A3A) with gentle vignette, premium tech aesthetic. Brand accents: teal (#136A66) and orange (#C65C2B) used subtly on icons/highlights only. Soft studio lighting, glow, depth of field, ultra high resolution, clean, minimal. No people, no faces, no logos, no watermark, no text.",
-      "imageUrl": "https://picsum.photos/seed/cveeez-hero-v5/1920/1080",
-      "imageHint": "minimal saas"
+      "description": "A man in a light blue professional shirt in a thinking pose with his hand on his chin. Floating around him are two 3D architectural models of modern multi-story buildings. The background is a deep blue digital abstract space with network nodes and glowing connections. The overall aesthetic is professional, tech-oriented, and focused on career/real estate development. High resolution composite image with studio lighting.",
+      "imageUrl": "https://picsum.photos/seed/cveeez-hero-man-buildings/1920/1080",
+      "imageHint": "thinking professional"
     }
   ]
 }
