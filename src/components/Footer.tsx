@@ -3,28 +3,40 @@
 import React from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/components/context/LanguageContext';
+import { useTheme } from '@/components/context/ThemeContext';
 import { Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 export const Footer = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   return (
     <footer className="bg-background border-t pt-16 pb-8 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">C</div>
-              <span className="text-2xl font-bold tracking-tight">CVEEEZ</span>
-            </div>
+            <Link href="/" className="flex items-center gap-3 group" aria-label="CVEEEZ Home">
+              <div className={cn(
+                "transition-all",
+                theme === 'light' ? "bg-slate-900/5 p-1 rounded-md" : ""
+              )}>
+                <img 
+                  src="/logo.png" 
+                  alt="CVEEEZ logo" 
+                  className="h-[26px] w-auto object-contain"
+                />
+              </div>
+              <span className="text-2xl font-bold tracking-tight group-hover:text-primary transition-colors">CVEEEZ</span>
+            </Link>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {t('hero.subtitle')}
             </p>
             <div className="flex gap-4">
-              <Link href="https://www.facebook.com/cveeez.eg/" target="_blank" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+              <Link href="https://www.facebook.com/cveeez.eg/" target="_blank" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </Link>
-              <Link href="https://eg.linkedin.com/company/cveeez" target="_blank" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+              <Link href="https://eg.linkedin.com/company/cveeez" target="_blank" className="w-10 h-10 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-white transition-all" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </Link>
             </div>
