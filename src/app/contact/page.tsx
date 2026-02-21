@@ -53,9 +53,6 @@ export default function ContactPage() {
                   <a href="mailto:cveeez@cveeez.online" target="_blank" rel="noopener noreferrer" className="text-muted-foreground block hover:text-primary transition-colors">
                     cveeez@cveeez.online
                   </a>
-                  <a href="mailto:support@cveeez.online" target="_blank" rel="noopener noreferrer" className="text-muted-foreground block hover:text-primary transition-colors">
-                    support@cveeez.online
-                  </a>
                 </div>
               </div>
             </div>

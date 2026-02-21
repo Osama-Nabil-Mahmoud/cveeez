@@ -71,7 +71,7 @@ export default function PoliciesPage() {
                 <ul className="list-disc list-inside space-y-2">
                   <li>14-day refund policy for eligible services.</li>
                   <li>No refund for AI CV generation once process begins.</li>
-                  <li>Support contact: support@cveeez.online (Response in 3-5 days).</li>
+                  <li>Support contact: cveeez@cveeez.online (Response in 3-5 days).</li>
                 </ul>
               </AccordionContent>
             </AccordionItem>
