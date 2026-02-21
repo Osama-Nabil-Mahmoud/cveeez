@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Navbar } from '@/components/Navbar';
@@ -20,9 +21,13 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import Link from 'next/link';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function Home() {
   const { t, isRtl } = useLanguage();
+
+  const heroImg = PlaceHolderImages.find(img => img.id === 'hero-illustration');
+  const appImg = PlaceHolderImages.find(img => img.id === 'mobile-app-mockup');
 
   const services = [
     { icon: Rocket, title: t('services.ai_cv.name'), desc: t('services.ai_cv.desc') },
@@ -79,12 +84,14 @@ export default function Home() {
           </div>
           <div className="relative animate-in fade-in slide-in-from-right-4 duration-700">
             <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full -z-10" />
-            <img 
-              src="https://picsum.photos/seed/cveeez/800/600" 
-              alt="Dashboard Preview" 
-              className="rounded-2xl shadow-2xl border border-border"
-              data-ai-hint="dashboard professional"
-            />
+            {heroImg && (
+              <img 
+                src={heroImg.imageUrl} 
+                alt={heroImg.description} 
+                className="rounded-2xl shadow-2xl border border-border"
+                data-ai-hint={heroImg.imageHint}
+              />
+            )}
           </div>
         </div>
       </section>
@@ -150,12 +157,14 @@ export default function Home() {
             </div>
           </div>
           <div className="relative flex justify-center">
-            <img 
-              src="https://picsum.photos/seed/phone/400/800" 
-              alt="Mobile App" 
-              className="max-h-[500px] object-contain drop-shadow-2xl"
-              data-ai-hint="mobile app mockup"
-            />
+            {appImg && (
+              <img 
+                src={appImg.imageUrl} 
+                alt={appImg.description} 
+                className="max-h-[500px] object-contain drop-shadow-2xl"
+                data-ai-hint={appImg.imageHint}
+              />
+            )}
           </div>
         </div>
       </section>

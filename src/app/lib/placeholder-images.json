@@ -1,0 +1,17 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-illustration",
+      "description": "3D minimal SaaS landing page hero illustration with floating badges and document UI",
+      "imageUrl": "https://picsum.photos/seed/cveeez-hero/1200/800",
+      "imageHint": "saas illustration"
+    },
+    {
+      "id": "mobile-app-mockup",
+      "description": "Mobile app mockup showing CVEEEZ application on a phone screen",
+      "imageUrl": "https://picsum.photos/seed/phone/400/800",
+      "imageHint": "mobile app"
+    }
+  ]
+}
