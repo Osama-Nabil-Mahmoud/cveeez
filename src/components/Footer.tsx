@@ -27,13 +27,14 @@ export const Footer = () => {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 group" aria-label="CVEEEZ Home">
               <div className={cn(
-                "transition-all",
-                theme === 'light' ? "bg-slate-900/5 p-1 rounded-md" : ""
+                "transition-all shrink-0",
+                theme === 'light' ? "bg-slate-900/5 p-1 rounded-md border border-slate-900/10" : ""
               )}>
                 <img 
-                  src="/logo.png" 
-                  alt="CVEEEZ logo" 
-                  className="h-[26px] w-auto object-contain"
+                  src="/logo-icon.png" 
+                  alt="CVEEEZ icon" 
+                  loading="lazy"
+                  className="h-6 w-auto object-contain"
                 />
               </div>
               <LogoText />

@@ -46,11 +46,12 @@ export const Navbar = () => {
         <Link href="/" className="flex items-center gap-2 group" aria-label="CVEEEZ Home">
           <div className={cn(
             "transition-all duration-300 shrink-0",
-            theme === 'light' ? "bg-slate-900/5 p-1 rounded-lg" : ""
+            theme === 'light' ? "bg-slate-900/5 p-1 rounded-lg border border-slate-900/10" : ""
           )}>
             <img 
-              src="/logo.png" 
-              alt="CVEEEZ logo" 
+              src="/logo-icon.png" 
+              alt="CVEEEZ icon" 
+              loading="lazy"
               className="h-7 w-auto md:h-8 object-contain"
             />
           </div>
