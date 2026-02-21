@@ -1,4 +1,3 @@
-
 "use client"
 
 import { Navbar } from '@/components/Navbar';
@@ -92,7 +91,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Label htmlFor="name">{t('contact.form_name')}</Label>
-                  <Input id="name" placeholder="John Doe / محمد أحمد" required />
+                  <Input id="name" placeholder={t('contact.form_name_placeholder')} required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">{t('contact.form_email')}</Label>
@@ -100,7 +99,7 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="message">{t('contact.form_message')}</Label>
-                  <Textarea id="message" rows={6} placeholder="How can we help? / كيف يمكننا مساعدتك؟" required />
+                  <Textarea id="message" rows={6} placeholder={t('contact.form_message_placeholder')} required />
                 </div>
                 <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90">
                   {t('contact.form_submit')}
