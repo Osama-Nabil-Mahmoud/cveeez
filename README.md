@@ -1,23 +1,25 @@
 # CVEEEZ Corporate Profile
 
-Professional landing page for CVEEEZ, built with Next.js, TailwindCSS, and multi-language support (AR/EN).
+منصة احترافية لشركة **CVEEEZ** مبنية باستخدام Next.js، TailwindCSS، ودعم كامل للغتين (العربية/الإنجليزية).
 
-## Project Structure
-- `src/app`: Next.js App Router pages.
-- `src/components`: UI components (Navbar, Footer, etc.).
-- `src/components/context`: Theme and Language context providers.
-- `src/lib/translations.ts`: Translation dictionary for AR and EN.
+## المميزات الحالية
+- **دعم اللغات**: تبديل فوري بين العربية (RTL) والإنجليزية (LTR).
+- **الوضع الليلي**: دعم كامل للـ Dark & Light mode.
+- **Hero Section**: تصميم عصري ثلاثي الأبعاد يعبر عن خدمات المنصة.
+- **الخدمات**: عرض خدمات بناء السيرة الذاتية بالذكاء الاصطناعي وبوابة الوظائف.
+- **التوافق**: متوافق تماماً مع الهواتف والأجهزة اللوحية.
+- **التواصل**: صفحة تواصل مبسطة توفر الوصول المباشر للموقع الرسمي والبريد الإلكتروني.
 
-## Local Development
-1. Clone the repository.
-2. Install dependencies: `npm install`
-3. Start dev server: `npm run dev`
-4. Visit `http://localhost:9002`
+## هيكلية المشروع
+- `src/app`: صفحات الراوتر (الصفحة الرئيسية، السياسات، التواصل).
+- `src/components`: المكونات الأساسية (Navbar, Footer, UI components).
+- `src/lib/translations.ts`: قاموس الترجمة للغتين.
+- `src/firebase`: إعدادات الربط مع خدمات Firebase (اختياري).
 
-## Deployment (Firebase Hosting)
-1. Build the project: `npm run build`
-2. Initialize Firebase (if not done): `firebase init hosting`
-3. Deploy: `firebase deploy`
+## تعليمات التشغيل المحلي
+1. قم بتثبيت التبعيات: `npm install`
+2. ابدأ خادم التطوير: `npm run dev`
+3. قم بزيارة: `http://localhost:9002`
 
-## Assets
-Place the company logo at `public/logo.png` for use in the Navbar and OG metadata.
+## النشر (Deployment)
+المشروع جاهز للنشر المباشر على **Vercel** من خلال ربط مستودع GitHub الخاص بك. سيقوم Vercel باكتشاف إعدادات Next.js تلقائياً وبدء عملية الـ Build.
