@@ -34,7 +34,11 @@ export const Navbar = () => {
   ];
 
   const LogoText = ({ sizeClass = "text-[20px]" }: { sizeClass?: string }) => (
-    <div className={cn("font-bold tracking-[-0.02em] leading-none flex items-center", sizeClass)}>
+    <div 
+      dir="ltr" 
+      className={cn("font-bold tracking-[-0.02em] leading-none flex items-center select-none", sizeClass)}
+      style={{ unicodeBidi: 'isolate' }}
+    >
       <span className="text-[#C65C2B]">CV</span>
       <span className="text-[#17181F] dark:text-[#F5F5F5]">eee</span>
       <span className="text-[#136A66]">z</span>
@@ -47,7 +51,13 @@ export const Navbar = () => {
       isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group" aria-label="CVEEEZ Home">
+        <Link 
+          href="/" 
+          dir="ltr"
+          className="flex flex-row items-center gap-2 group" 
+          aria-label="CVEEEZ Home"
+          style={{ unicodeBidi: 'isolate' }}
+        >
           <div className={cn(
             "transition-all duration-300 shrink-0",
             theme === 'light' ? "bg-slate-900/5 p-1 rounded-lg border border-slate-900/10" : ""

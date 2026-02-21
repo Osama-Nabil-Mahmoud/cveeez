@@ -18,7 +18,11 @@ export const Footer = () => {
   }, []);
 
   const LogoText = ({ sizeClass = "text-[18px]" }: { sizeClass?: string }) => (
-    <div className={cn("font-bold tracking-[-0.02em] leading-none flex items-center", sizeClass)}>
+    <div 
+      dir="ltr"
+      className={cn("font-bold tracking-[-0.02em] leading-none flex items-center select-none", sizeClass)}
+      style={{ unicodeBidi: 'isolate' }}
+    >
       <span className="text-[#C65C2B]">CV</span>
       <span className="text-[#17181F] dark:text-[#F5F5F5]">eee</span>
       <span className="text-[#136A66]">z</span>
@@ -30,7 +34,13 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2 group" aria-label="CVEEEZ Home">
+            <Link 
+              href="/" 
+              dir="ltr"
+              className="flex flex-row items-center gap-2 group" 
+              aria-label="CVEEEZ Home"
+              style={{ unicodeBidi: 'isolate' }}
+            >
               <div className={cn(
                 "transition-all shrink-0",
                 theme === 'light' ? "bg-slate-900/5 p-1 rounded-md border border-slate-900/10" : ""
