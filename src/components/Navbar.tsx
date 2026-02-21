@@ -18,6 +18,10 @@ export const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
+    
+    // Confirm logo path loading
+    console.log("Resolved Navbar Logo Path:", "/logo-icon.png");
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

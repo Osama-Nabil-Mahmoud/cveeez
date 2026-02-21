@@ -1,7 +1,7 @@
 
 "use client"
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { useLanguage } from '@/components/context/LanguageContext';
 import { useTheme } from '@/components/context/ThemeContext';
@@ -11,6 +11,11 @@ import { cn } from '@/lib/utils';
 export const Footer = () => {
   const { t } = useLanguage();
   const { theme } = useTheme();
+
+  useEffect(() => {
+    // Confirm logo path loading
+    console.log("Resolved Footer Logo Path:", "/logo-icon.png");
+  }, []);
 
   const LogoText = ({ sizeClass = "text-[18px]" }: { sizeClass?: string }) => (
     <div className={cn("font-bold tracking-[-0.02em] leading-none flex items-center", sizeClass)}>
